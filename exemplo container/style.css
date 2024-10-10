@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container-wrapper {
+    display: flex;
+    width: 1800px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    width: 900px;
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../assets/bg-azul-airplanes-color2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hidden {
+    transform: translateX(100%);
+    /* margin-inline-end: 10px; */
+}
+
+.container-wrapper.active #container1 {
+    transform: translateX(-100%);
+}
+
+.container-wrapper.active #container2 {
+    transform: translateX(0);
+}
+
+/* Alinhando os links lado a lado */
+.link-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 80px;
+    gap: 20px; /* Espaço entre os links */
+    padding: 15px;
+    background-color: #f0f8ff84;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+/* Link container para cada link individual */
+.link-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+.link-item:hover {
+    background-color: #eef7ffc0;
+}
+
+.link-item a {
+    text-decoration: none;
+    color: #0077cc;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.link-item a:hover {
+    color: #005fa3;
+}
+
+.link-item img {
+    width: 50px;
+    height: 45px;
+}
+
+
+@media (max-width: 600px) {
+    .link-item a {
+        font-size: 16px;
+    }
+    .link-item img {
+        width: 28px;
+        height: 28px;
+    }
+}
