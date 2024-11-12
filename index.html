@@ -5,20 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Aviation Links</title>
     <link rel="stylesheet" href="/css/style.css">
-    
+    <script>
+        function loadContent(page) {
+            // Esconde a div container
+            document.querySelector(".container").style.display = "none";
+            // Limpa o conteúdo atual e mostra o botão voltar
+            document.getElementById("content").innerHTML = "";
+
+            // Carrega o novo conteúdo
+            fetch(page)
+                .then(response => response.text())
+                .then(content => {
+                    document.getElementById("content").innerHTML = content;
+                })
+                .catch(error => {
+                    document.getElementById("content").innerHTML = "Erro ao carregar a página.";
+                });
+        }
+    </script>
 </head>
 <body>
     <div class="container">
+        <h1>Links - AZUL</h1>
         <div class="link-item">
-            <a href="/passe_livre.html">
+            <a href="javascript:void(0);" onclick="loadContent('/passe_livre.html')">
                 PASSE LIVRE - Congeneres
             </a>
         </div>
         <div class="link-item">
-            <a href="/viagens.html">
-                VAGENS
+            <a href="javascript:void(0);" onclick="loadContent('/viagens.html')">
+                VIAGENS
             </a>
         </div>
+    </div>
+    
+    <div id="content">
+        <!-- O conteúdo carregado será exibido aqui -->
+        <p></p>
     </div>
 </body>
 </html>
