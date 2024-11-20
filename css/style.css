@@ -25,13 +25,11 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     /* background-color: #ffffff79; */
     border-radius: 12px;
-    /* border: 2px solid #0077cc; */
-
-    /* Adicionando a imagem de fundo */
     background-image: url('../assets/bg-azul-airplanes-color2.jpg');
     background-size: cover; 
     background-position: center; 
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
+    text-align: center;
 }
 
 .link_container {
@@ -39,15 +37,12 @@ body {
     width: 100%;
     padding: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    /* background-color: #ffffff79; */
     border-radius: 12px;
-    /* border: 2px solid #0077cc; */
-
-    /* Adicionando a imagem de fundo */
     background-image: url('../assets/bg-azul-airplanes-color2.jpg');
     background-size: cover; 
     background-position: center; 
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
+    align-items: center; 
 }
 
 
